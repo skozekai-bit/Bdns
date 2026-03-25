@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mattbor Biryani</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="admin-modal" class="modal">
+        <div class="modal-content">
+            <h3>Admin Access</h3>
+            <input type="password" id="admin-pass" placeholder="Enter Password">
+            <button onclick="checkPassword()">Login</button>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <nav>
+        <div class="logo">MATTBOR</div>
+        <div class="three-dots" onclick="handleDotClick()">⋮</div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Mattbor Biryani</h1>
+            <p>Authentic flavors delivered to your doorstep.</p>
+            <button class="order-btn">Order Now</button>
+        </div>
+        <div class="hero-image-circle">
+            <img src="hero-biryani.jpg" id="hero-img-display" alt="Main Biryani">
+        </div>
+    </header>
+
+    <section class="menu-section">
+        <h2>Special Menu</h2>
+        <div id="menu-grid" class="grid"></div>
+    </section>
+
+    <section id="admin-panel" class="admin-panel" style="display:none;">
+        <h2>Admin Dashboard</h2>
+        <div class="admin-controls">
+            <input type="text" id="new-name" placeholder="Food Name">
+            <input type="text" id="new-price" placeholder="Price (e.g. $10)">
+            <input type="text" id="new-desc" placeholder="Description">
+            <input type="text" id="new-img" placeholder="Image Filename (e.g. dish1.jpg)">
+            <button onclick="addItem()">Add Item</button>
+            <button onclick="clearMenu()" style="background:red;">Clear All</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
